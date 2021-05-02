@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="default_sender_id">434944116762</string>
+</resources>

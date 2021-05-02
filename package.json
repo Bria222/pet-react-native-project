@@ -1,0 +1,47 @@
+{
+  "name": "react-native-pet-app",
+  "version": "2.6.2",
+  "private": true,
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.1",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^22.4.3",
+    "jest-react-native": "^18.0.0",
+    "react-test-renderer": "16.3.0-alpha.1",
+    "remote-redux-devtools": "^0.5.12",
+    "remotedev-rn-debugger": "^0.8.3"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "setup:adb": "adb reverse tcp:8000 tcp:8000 && adb reverse tcp:8097 tcp:8097",
+    "android": "react-native run-android && npm run setup:adb",
+    "log:android": "react-native log-android",
+    "ios": "react-native run-ios",
+    "postinstall": "remotedev-debugger --hostname=localhost --port=8000 --injectserver=reactnative",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "@mapbox/geo-viewport": "^0.2.2",
+    "hoist-non-react-statics": "^2.5.0",
+    "lodash": "^4.17.13",
+    "prop-types": "^15.6.1",
+    "react": "16.3.0-alpha.1",
+    "react-native": "0.60.0",
+    "react-native-android-native-app-settings": "^0.1.6",
+    "react-native-maps": "^0.21.0",
+    "react-native-platform-touchable": "^1.1.1",
+    "react-native-push-notification": "^3.0.2",
+    "react-native-secure-key-store": "^1.0.9",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^1.5.11",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-batched-actions": "^0.2.1",
+    "redux-form": "^7.3.0",
+    "redux-thunk": "^2.2.0",
+    "supercluster": "^3.0.2"
+  }
+}
